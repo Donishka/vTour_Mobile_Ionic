@@ -29,8 +29,8 @@ export class EditServiceProvidersPage {
   public telephone: any;
   public username: string
 
-  private _HOST: string = "http://localhost:4201/";
-  private _LOGINHOST: string = "http://localhost:4201/login";
+  private _HOST: string = "http://139.59.26.108:4201/";
+  private _LOGINHOST: string = "http://139.59.26.108:4201/login";
 
 
   constructor(public navCtrl: NavController,

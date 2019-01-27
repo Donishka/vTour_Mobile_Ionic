@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { EditProfilePage } from '../edit-profile/edit-profile';
 import { ResetPasswordPage } from '../reset-password/reset-password';
-import { IonicPage, NavController, NavParams, Alert, AlertController, ToastController } from 'ionic-angular';
+import { IonicPage, MenuController, NavController, NavParams, Alert, AlertController, ToastController } from 'ionic-angular';
 import { AuthProvider } from '../../providers/auth/auth';
 import {FormBuilder,FormGroup,Validators} from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { tokenNotExpired } from 'angular2-jwt';
 import { TravelAgentsPage} from '../travel-agents/travel-agents';
 import {TravelAgentProfilePage} from '../travel-agent-profile/travel-agent-profile';
+
 import { ServiceProviderProfilePage} from '../service-provider-profile/service-provider-profile'
 @Component({
   selector: 'page-home',
@@ -17,7 +18,7 @@ export class HomePage {
   user: any;
   authtoken: any;
   item:any;
-  private _HOST: string = "http://localhost:4201/";
+  private _HOST: string = "http://139.59.26.108:4201/";
   public password: any;
   public email: any;
   public form: FormGroup;
@@ -28,9 +29,12 @@ export class HomePage {
     private _HTTP: HttpClient,
     private _TOAST: ToastController,
     private authProvider: AuthProvider, 
-    private alertCtrl: AlertController)
+    private alertCtrl: AlertController,
+    public menuCtrl: MenuController
+    )
 
   {
+    this.menuCtrl.enable(false, 'myMenu');
     this.form = this._FB.group({
       'email': ['', Validators.required],
       'password': ['', Validators.required]});

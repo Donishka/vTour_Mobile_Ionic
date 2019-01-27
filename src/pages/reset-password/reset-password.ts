@@ -17,7 +17,7 @@ export class ResetPasswordPage {
 
   public email: any;
 
-  private _HOST : string 			=	"http://localhost:4201/";
+  private _HOST : string 			=	"http://139.59.26.108:4201/";
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
@@ -79,8 +79,11 @@ export class ResetPasswordPage {
       this._HTTP
       .post(url, options, headers)
       .subscribe((data: any) => {
-        console.log(url + " data " + JSON.stringify(data));
-        this.displayNotification('Sucessfully Reset the password');
+        if(data.state){
+          this.presentConfirm();
+        }else{
+          this.displayNotification("Invalid Email");
+        }        
       },
         (error: any) => {
           console.dir(error);

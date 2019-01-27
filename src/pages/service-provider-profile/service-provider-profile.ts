@@ -19,7 +19,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class ServiceProviderProfilePage {
   sp: any;
   public items: Array<any>;
-  private _HOST: string = "http://localhost:4201/";
+  private _HOST: string = "http://139.59.26.108:4201/";
 
   constructor(private _HTTP: HttpClient,public navCtrl: NavController, public navParams: NavParams) {
     this.sp = navParams.get('record');

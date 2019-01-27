@@ -26,7 +26,7 @@ export class AddNewAgentPage {
   public telephone: [string];
   public rePassword :any;
 
-  private _HOST : string 			=	"http://localhost:4201/";
+  private _HOST : string 			=	"http://139.59.26.108:4201/";
 
 
   constructor(public navCtrl: NavController,
@@ -138,7 +138,7 @@ export class AddNewAgentPage {
   public telephone: [string];
   public rePassword :any;
 
-   private _HOST : string 			=	"http://localhost:4201/";
+   private _HOST : string 			=	"http://139.59.26.108:4201/";
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,

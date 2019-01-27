@@ -20,7 +20,7 @@ import { EditServiceProvidersPage } from '../edit-service-providers/edit-service
 export class ServiceProvidersPage {
   public items : Array<any>;
 
-   private _HOST : string       =  "http://localhost:4201/";
+   private _HOST : string       =  "http://139.59.26.108:4201/";
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams,

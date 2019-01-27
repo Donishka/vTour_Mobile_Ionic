@@ -1,11 +1,22 @@
 <ion-header>
-  <ion-navbar color="danger">
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Clients</ion-title>
-  </ion-navbar>
-</ion-header>
+    <ion-navbar color="danger">
+      <button ion-button menuToggle>
+         <ion-icon name="menu"></ion-icon>
+     </button>
+     <ion-title>Clients</ion-title>
+     <ion-buttons end>
+        <button  ion-button icon-only (click)="addNewClient()">
+          <ion-icon name="add"></ion-icon>
+        </button>
+    </ion-buttons> 
+   </ion-navbar>
+ </ion-header>
+
+ <ion-footer>
+     <ion-navbar color="danger">
+       <ion-title></ion-title>
+     </ion-navbar>
+ </ion-footer>
 
 <ion-content padding>
   <ion-list>

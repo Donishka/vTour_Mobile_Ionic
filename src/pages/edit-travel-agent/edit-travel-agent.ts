@@ -20,8 +20,8 @@ export class EditTravelAgentPage {
   public address: string;
   public isadmin: any;
   public telephone: [string];
-  private _HOST : string       =  "http://localhost:4201/travelagents";
-  private _LOGINHOST: string = "http://localhost:4201/login";
+  private _HOST : string       =  "http://139.59.26.108:4201/travelagents";
+  private _LOGINHOST: string = "http://139.59.26.108:4201/login";
 
   constructor(public navCtrl: NavController, 
     public navParams: NavParams,
